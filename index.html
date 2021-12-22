@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2 id="test">Меняется цвет текста</h2>
+    <button onclick="CT()">Поменять цвет</button>
+    <input type="text" id="ch">
+    <input type="text" id="lk">
+    <input type="submit" onclick="L()" value="Меняется ссылка">
+    <a style="color: black;" href="https://google.ru">Ссылка</a>
+    <input type="text" id="colorbackground">
+    <button onclick="Bg()">Меняется задний фон</button>
+    <script>
+        function background(){
+            var background = document.getElementById("colorbackground").value;
+            document.body.style.background = BG;
+        }
+
+        function L(){
+            var link = document.querySelector('a[href="https://google.ru"]');
+            var text = document.getElementById("lk").value;
+            link.setAttribute("href", text);
+        }
+
+        function CT(){
+            var textColor = document.getElementById("test");
+            var textC = document.getElementById("ch").value;
+            
+            textColor.style.color = textC;
+        }
+</script>
+</body>
+</html>
